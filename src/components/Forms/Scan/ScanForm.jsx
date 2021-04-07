@@ -23,12 +23,14 @@ const CompanyForm = ({ onSubmit }) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="row">
         <div className="col-12 form-group">
+          <label htmlFor="target">Target</label>
           <input {...register('target')} className="form-control" />
-          {errors.target && errors.target.message}
+          <div className="text-danger">{errors.target && errors.target.message}</div>
         </div>
         <div className="col-12 form-group">
+          <label htmlFor="module">Module</label>
           <input {...register('module')} className="form-control" />
-          {errors.module && errors.module.message}
+          <div className="text-danger">{errors.module && errors.module.message}</div>
         </div>
       </div>
       <div className="row">
